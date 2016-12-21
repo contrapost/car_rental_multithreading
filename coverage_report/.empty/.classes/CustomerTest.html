@@ -1,0 +1,112 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CustomerTest</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CustomerTest (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CustomerTest</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (6/ 6)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;import org.junit.Before;
+<i>2</i>&nbsp;import org.junit.Test;
+<i>3</i>&nbsp;
+<i>4</i>&nbsp;import java.util.concurrent.CountDownLatch;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;import static org.junit.Assert.assertEquals;
+<i>7</i>&nbsp;import static org.mockito.Mockito.mock;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;/**
+<i>10</i>&nbsp; * Created by Alexander on 21.01.2016.
+<i>11</i>&nbsp; *
+<b class="fc"><i>12</i>&nbsp; */</b>
+<i>13</i>&nbsp;public class CustomerTest {
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    private String name = &quot;Al&quot;;
+<b class="fc"><i>16</i>&nbsp;    private Customer customer;</b>
+<b class="fc"><i>17</i>&nbsp;</b>
+<b class="fc"><i>18</i>&nbsp;    @Before</b>
+<b class="fc"><i>19</i>&nbsp;    public void setUp(){</b>
+<b class="fc"><i>20</i>&nbsp;        customer = new Customer(name, mock(CarRentalAgency.class),</b>
+<i>21</i>&nbsp;                mock(CountDownLatch.class));
+<i>22</i>&nbsp;    }
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    @Test
+<i>25</i>&nbsp;    public void testGetName(){
+<i>26</i>&nbsp;        assertEquals(customer.getName(), name);
+<i>27</i>&nbsp;    }
+<i>28</i>&nbsp;
+<i>29</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2016-01-31 22:06</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CarRentalApplication</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">&lt;empty package name&gt;</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CarRentalApplication (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CarRentalApplication</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 18)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;import javax.swing.*;
+<i>2</i>&nbsp;import java.util.ArrayList;
+<i>3</i>&nbsp;import java.util.concurrent.CountDownLatch;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;/**
+<i>6</i>&nbsp; * Created by Alexander on 23.01.2016.
+<i>7</i>&nbsp; * 
+<b class="nc"><i>8</i>&nbsp; */</b>
+<i>9</i>&nbsp;public class CarRentalApplication {
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;    public static void main(String[] args) {
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;        //ArrayList with Car objects that Car rental Agency disposes
+<b class="nc"><i>14</i>&nbsp;        //Extra cars can be added/deleted to the array list here.</b>
+<i>15</i>&nbsp;        ArrayList&lt;Car&gt; cars = new ArrayList&lt;&gt;();
+<b class="nc"><i>16</i>&nbsp;        //region Populate cars with Car-objects.</b>
+<b class="nc"><i>17</i>&nbsp;        cars.add(new Car(&quot;AB12345&quot;));</b>
+<b class="nc"><i>18</i>&nbsp;        cars.add(new Car(&quot;CD23456&quot;));</b>
+<b class="nc"><i>19</i>&nbsp;        cars.add(new Car(&quot;EF34567&quot;));</b>
+<b class="nc"><i>20</i>&nbsp;        cars.add(new Car(&quot;GH45678&quot;));</b>
+<i>21</i>&nbsp;        cars.add(new Car(&quot;IJ56789&quot;));
+<i>22</i>&nbsp;        //endregion
+<b class="nc"><i>23</i>&nbsp;</b>
+<b class="nc"><i>24</i>&nbsp;        CarRentalAgency carRental = new CarRentalAgency(cars);</b>
+<i>25</i>&nbsp;        CountDownLatch startSignal = new CountDownLatch(5);
+<i>26</i>&nbsp;
+<b class="nc"><i>27</i>&nbsp;        // Asks user about number of customers (default value is 10).</b>
+<b class="nc"><i>28</i>&nbsp;        String textNumber = JOptionPane.showInputDialog(null, &quot;Insert number of customers&quot;, 10);</b>
+<b class="nc"><i>29</i>&nbsp;        if (textNumber == null) { System.exit(0); }</b>
+<i>30</i>&nbsp;        int numberOfCustomers = Integer.parseInt(textNumber);
+<i>31</i>&nbsp;
+<b class="nc"><i>32</i>&nbsp;        // Initialize customers as threads and starts executing threads when the number of threads are 5.</b>
+<b class="nc"><i>33</i>&nbsp;        for (int i = 1; i &lt; numberOfCustomers + 1; i++) {</b>
+<b class="nc"><i>34</i>&nbsp;            String name = JOptionPane.showInputDialog(null, &quot;Type the name of customer # &quot; + i + &quot;:&quot;);</b>
+<b class="nc"><i>35</i>&nbsp;            new Thread(new Customer(name, carRental, startSignal)).start();</b>
+<i>36</i>&nbsp;            startSignal.countDown();
+<i>37</i>&nbsp;        }
+<i>38</i>&nbsp;
+<b class="nc"><i>39</i>&nbsp;        //Asks user to close the app</b>
+<b class="nc"><i>40</i>&nbsp;        JOptionPane.showMessageDialog(null, &quot;Time to close the agency?&quot;, &quot;Car Rental App.&quot;, JOptionPane.QUESTION_MESSAGE);</b>
+<i>41</i>&nbsp;        System.exit(0);
+<i>42</i>&nbsp;    }
+<i>43</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2016-01-31 22:06</div>
+</div>
+</body>
+</html>

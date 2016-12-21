@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="472.3859649122807" y="875.0">com</node>
+    <node x="602.3859649122808" y="778.0">netscape</node>
+    <node x="622.3859649122808" y="875.0">junit</node>
+    <node x="4.385964912280713" y="875.0">oracle</node>
+    <node x="296.3859649122807" y="950.0">org</node>
+    <node x="500.42690058479536" y="759.9883040935673">CustomerTest</node>
+    <node x="360.70175438596493" y="-11.695906432748544">Customer</node>
+    <node x="0.0" y="0.0">CarRentalAgency</node>
+    <node x="151.3859649122807" y="950.0">sun</node>
+    <node x="422.3859649122807" y="778.0">META-INF</node>
+    <node x="440.3859649122807" y="950.0">jdk</node>
+    <node x="4.385964912280713" y="950.0">java</node>
+    <node x="4.385964912280713" y="778.0">CarTest</node>
+    <node x="319.3859649122807" y="875.0">javax</node>
+    <node x="424.719298245614" y="257.0643274853801">Car</node>
+    <node x="143.27485380116957" y="742.4444444444445">CarRentalAgencyTest</node>
+    <node x="52.795321637426866" y="310.16374269005837">CarRentalApplication</node>
+    <node x="162.3859649122807" y="875.0">javafx</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="429.5" y="124.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
